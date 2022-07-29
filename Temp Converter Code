@@ -1,0 +1,25 @@
+measurement = input('Is the temperature currently read in Celsius, Fahrenheit, or Kelvin?')
+temperature = input('What is the current temperature?')
+float = float(temperature)
+print('Current Temperature:', temperature)
+
+if measurement == 'Celsius':
+    conversion = input('Would you like to convert to Fahrenheit or Kelvin?')
+    if conversion == 'Fahrenheit':
+        result = float * 1.8 + 32
+    if conversion == 'Kelvin':
+        result = float + 273.15
+
+if measurement == 'Fahrenheit':
+    conversion = input('Would you like to convert to Celsius or Kelvin?')
+    if conversion == 'Kelvin':
+        result = (float - 32) * 1.8 + 273.15
+    if conversion == 'Celsius':
+        result = (float - 32) * 1.8
+        
+if measurement == 'Kelvin':
+    conversion = input('Would you like to convert to Celsius or Fahrenheit?')
+    if conversion == 'Fahrenheit':
+        result = (float - 273.15) * 1.8 + 32
+    if conversion == 'Celsius':
+        result = (float - 273.15)
